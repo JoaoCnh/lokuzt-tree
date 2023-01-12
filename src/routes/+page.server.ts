@@ -13,10 +13,8 @@ interface Data {
 }
 
 export const load = (async ({ setHeaders }) => {
-	// cache the page for the same length of time
-	// as the underlying data
 	setHeaders({
-		'cache-control': `s-maxage=${1000 * 60 * 60 * 24 * 5}`
+		'cache-control': `s-maxage=${1000 * 60 * 60 * 24}`
 	});
 
 	return {
