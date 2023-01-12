@@ -59,7 +59,7 @@
 		</a>
 	</div>
 
-	<footer class="mt-16">
+	<footer class="mt-16 mb-8">
 		<span>&copy; {new Date().getFullYear()} Lokuzt</span>
 	</footer>
 </div>
