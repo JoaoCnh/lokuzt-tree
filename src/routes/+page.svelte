@@ -1,10 +1,12 @@
 <script lang="ts">
 	import LinkCard from '$lib/LinkCard.svelte';
+	import RevealLinkCard from '$lib/RevealLinkCard.svelte';
 	import TikTokIcon from '$lib/TikTokIcon.svelte';
 	import TwitchIcon from '$lib/TwitchIcon.svelte';
 	import TwitterIcon from '$lib/TwitterIcon.svelte';
 	import YoutubeIcon from '$lib/YoutubeIcon.svelte';
 	import InstagramIcon from '$lib/InstagramIcon.svelte';
+	import EmailIcon from '$lib/EmailIcon.svelte';
 	import GithubIcon from '$lib/GithubIcon.svelte';
 
 	import type { ComponentType, SvelteComponentTyped } from 'svelte';
@@ -31,10 +33,11 @@
 		}
 	}
 
+	export const email = 'lokuzt.sw@gmail.com';
 	export let data: PageData;
 </script>
 
-<div class="w-full flex flex-col items-center justify-center mx-auto mt-16 px-8">
+<div class="w-full flex flex-col items-center justify-center mx-auto pt-16 px-8">
 	<img src={logo} class="rounded-full" alt="Lokuzt" width={96} height={96} />
 
 	<h1 class="font-bold mt-4 mb-8 text-xl text-white">Lokuzt</h1>
@@ -42,6 +45,8 @@
 	{#each data.links as link}
 		<LinkCard title={link.title} href={link.href} icon={renderIcon(link.icon)} />
 	{/each}
+
+	<RevealLinkCard revealText="Unlock E-mail" title={email} href="mailto:{email}" icon={EmailIcon} />
 
 	<div class="flex items-center gap-4 mt-8 text-white">
 		<a
