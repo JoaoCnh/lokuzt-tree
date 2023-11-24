@@ -9,14 +9,12 @@
 	import EmailIcon from '$lib/EmailIcon.svelte';
 	import GithubIcon from '$lib/GithubIcon.svelte';
 
-	import type { ComponentType, SvelteComponentTyped } from 'svelte';
+	import type { ComponentType } from 'svelte';
 	import type { PageData } from './$types';
 
 	import logo from '$lib/assets/logo.jpeg';
 
-	function renderIcon(
-		icon: PageData['links'][0]['icon']
-	): ComponentType<SvelteComponentTyped<any>> | undefined {
+	function renderIcon(icon: PageData['links'][0]['icon']): ComponentType | undefined {
 		switch (icon) {
 			case 'twitch':
 				return TwitchIcon;

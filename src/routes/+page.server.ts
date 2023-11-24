@@ -12,7 +12,7 @@ interface Data {
 	links: Link[];
 }
 
-export const load = (async ({ setHeaders }) => {
+export const load: PageServerLoad = (async ({ setHeaders }) => {
 	setHeaders({
 		'cache-control': `s-maxage=${1000 * 60 * 60 * 24}`
 	});
@@ -46,4 +46,4 @@ export const load = (async ({ setHeaders }) => {
 			}
 		]
 	};
-}) satisfies PageServerLoad<Data>;
+});
