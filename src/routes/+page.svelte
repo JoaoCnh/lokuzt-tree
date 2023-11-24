@@ -58,4 +58,8 @@
 			<GithubIcon class="w-10 h-10" />
 		</a>
 	</div>
+
+	<footer class="mt-16">
+		<span>&copy; {new Date().getFullYear()} Lokuzt</span>
+	</footer>
 </div>
